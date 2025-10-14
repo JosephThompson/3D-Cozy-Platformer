@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c1y4qsvx5ihni"
+path="res://.godot/imported/pillar3.obj-d3541353d72e0d2ee0e89d580e5036de.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pillar3.obj-d3541353d72e0d2ee0e89d580e5036de.mesh"]
+
+source_file="res://Assets/Blends/obj/pillar3.obj"
+dest_files=["res://.godot/imported/pillar3.obj-d3541353d72e0d2ee0e89d580e5036de.mesh", "res://.godot/imported/pillar3.obj-d3541353d72e0d2ee0e89d580e5036de.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

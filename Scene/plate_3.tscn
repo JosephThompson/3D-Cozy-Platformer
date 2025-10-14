@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://15kpcguvwiur"]
+
+[ext_resource type="ArrayMesh" uid="uid://bxqgi5gnob74w" path="res://Assets/Blends/obj/plate3.obj" id="1_7gblc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tvdcu"]
+size = Vector3(3.694397, 1, 5.5284424)
+
+[node name="Plate3" type="StaticBody3D"]
+
+[node name="Plate3" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_7gblc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.073638916, 0, 0.025939941)
+shape = SubResource("BoxShape3D_tvdcu")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1grxmaueew0y"]
+
+[ext_resource type="ArrayMesh" uid="uid://c7iu08p83cqfg" path="res://Assets/Blends/obj/structure1.obj" id="1_kxmv4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yk5rb"]
+size = Vector3(5, 1, 7)
+
+[node name="Structure1" type="StaticBody3D"]
+
+[node name="Structure1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_kxmv4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_yk5rb")

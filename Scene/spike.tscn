@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6771iolvmrxj"]
+
+[ext_resource type="ArrayMesh" uid="uid://c8qj2d0evkhdt" path="res://Assets/Blends/obj/spike.obj" id="1_406ys"]
+[ext_resource type="Script" uid="uid://x5txhkm52nfs" path="res://Assets/Scripts/spike.gd" id="1_wrgfn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wrgfn"]
+size = Vector3(0.5266113, 2.3446045, 2.01857)
+
+[node name="Spike" type="Area3D"]
+script = ExtResource("1_wrgfn")
+
+[node name="Spike" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+mesh = ExtResource("1_406ys")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010864258, -0.13690186, -0.019248962)
+shape = SubResource("BoxShape3D_wrgfn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

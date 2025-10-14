@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://ej2qfuw61w65"]
+
+[ext_resource type="Script" uid="uid://dubr0rtromhv1" path="res://Assets/Scripts/PlayerController.gd" id="1_kelma"]
+[ext_resource type="Script" uid="uid://b46ip88irxkam" path="res://Assets/Scripts/player_model_controller.gd" id="2_y8w33"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_j47wa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kelma"]
+
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+script = ExtResource("1_kelma")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_j47wa")
+script = ExtResource("2_y8w33")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_kelma")

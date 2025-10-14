@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://e5ioymrav3xe"]
+
+[ext_resource type="Script" uid="uid://bpbvljvbka3t2" path="res://Assets/Scripts/end_point.gd" id="1_ldmr8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8qs4a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ldmr8"]
+albedo_color = Color(0.9137255, 0.39607844, 0.105882354, 1)
+emission_enabled = true
+emission = Color(0.9137255, 0.14509805, 0.105882354, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8qs4a"]
+size = Vector3(1.4369507, 1.1260986, 1.5827637)
+
+[node name="EndPoint" type="Area3D"]
+script = ExtResource("1_ldmr8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.7233891, -0.6904406, 0, 0.5698143, 0.5970064, 0.5647077, -0.3898972, -0.40850347, 0.8252909, 0, 0, 0)
+mesh = SubResource("BoxMesh_8qs4a")
+surface_material_override/0 = SubResource("StandardMaterial3D_ldmr8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009613037, 0.06304932, -0.005004883)
+shape = SubResource("BoxShape3D_8qs4a")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
